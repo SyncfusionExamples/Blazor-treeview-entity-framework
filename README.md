@@ -1,5 +1,5 @@
 # Blazor-treeview-entity-framework
-A quick getting started project to create an Entity Framework application with Blazor TreeView component. The Blazor TreeView component is used to represent hierarchical data in a tree like structure with advanced functions to edit, drag and drop, select with CheckBox and more
+A quick getting started project to create an Entity Framework application with Blazor TreeView component. The Blazor TreeView is a graphical user interface Component that allows you to represent hierarchical data in a tree structure. It has great performance combined with advanced features like load on demand, checkbox support, multiple selection, tree navigation, drag and drop, tree node editing, and template support.
 
 ## Project pre-requisites
 Make sure that you have the compatible versions of Visual Studio Code and .NET Core SDK 3.1.2 in your machine before starting to work on this project.
