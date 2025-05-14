@@ -10,11 +10,10 @@ using SQLTreeView.Data;
 using SQLTreeView.Shared.DataAccess;
 using SQLTreeView.Shared.Models;
 
-
-namespace WebApplication1.Server.Controllers
+namespace SQLTreeView.Server.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class DefaultController : ControllerBase
     {
         OrganizationDataAccessLayer db = new OrganizationDataAccessLayer();
@@ -59,12 +58,12 @@ namespace WebApplication1.Server.Controllers
             return index;
         }
         [HttpPost]
-        public void Post([FromBody]OrganizationDetails employee)
+        public void Post([FromBody] OrganizationDetails employee)
         {
             db.AddEmployee(employee);
         }
         [HttpPut]
-        public object Put([FromBody]OrganizationDetails employee)
+        public object Put([FromBody] OrganizationDetails employee)
         {
             db.UpdateEmployee(employee);
             return employee;

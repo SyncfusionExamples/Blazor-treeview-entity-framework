@@ -1,13 +1,12 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29411.138
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.35906.104
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLTreeView.Server", "SQLTreeView\Server\SQLTreeView.Server.csproj", "{59A9DCFB-40B0-4144-BC44-599F236E3121}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLTreeView.Server", "SQLTreeView\Server\SQLTreeView.Server.csproj", "{65219B69-C257-40B7-A8EF-136215839A5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLTreeView.Client", "SQLTreeView\Client\SQLTreeView.Client.csproj", "{C407576E-9AF4-418F-A7F2-553223956367}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLTreeView.Client", "SQLTreeView\Client\SQLTreeView.Client.csproj", "{09A88093-28B9-455D-9AC8-C6EF161707D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLTreeView.Shared", "SQLTreeView\Shared\SQLTreeView.Shared.csproj", "{D105C480-C1ED-489C-9AE2-7E7EE9388575}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLTreeView.Shared", "SQLTreeView\Shared\SQLTreeView.Shared.csproj", "{E0A9F63F-F6FA-4A26-921A-E8A6D01B8E46}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,23 +14,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{59A9DCFB-40B0-4144-BC44-599F236E3121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{59A9DCFB-40B0-4144-BC44-599F236E3121}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{59A9DCFB-40B0-4144-BC44-599F236E3121}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{59A9DCFB-40B0-4144-BC44-599F236E3121}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C407576E-9AF4-418F-A7F2-553223956367}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C407576E-9AF4-418F-A7F2-553223956367}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C407576E-9AF4-418F-A7F2-553223956367}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C407576E-9AF4-418F-A7F2-553223956367}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D105C480-C1ED-489C-9AE2-7E7EE9388575}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D105C480-C1ED-489C-9AE2-7E7EE9388575}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D105C480-C1ED-489C-9AE2-7E7EE9388575}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D105C480-C1ED-489C-9AE2-7E7EE9388575}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65219B69-C257-40B7-A8EF-136215839A5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65219B69-C257-40B7-A8EF-136215839A5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65219B69-C257-40B7-A8EF-136215839A5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65219B69-C257-40B7-A8EF-136215839A5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09A88093-28B9-455D-9AC8-C6EF161707D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09A88093-28B9-455D-9AC8-C6EF161707D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09A88093-28B9-455D-9AC8-C6EF161707D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09A88093-28B9-455D-9AC8-C6EF161707D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0A9F63F-F6FA-4A26-921A-E8A6D01B8E46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0A9F63F-F6FA-4A26-921A-E8A6D01B8E46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0A9F63F-F6FA-4A26-921A-E8A6D01B8E46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0A9F63F-F6FA-4A26-921A-E8A6D01B8E46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {FA74F99B-08FC-490F-A711-43F0AA793D76}
+		SolutionGuid = {1013F71C-F72C-4B5D-B1DD-F94666B9BCDA}
 	EndGlobalSection
 EndGlobal
