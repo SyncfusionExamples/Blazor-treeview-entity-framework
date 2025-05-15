@@ -1,13 +1,5 @@
-﻿using SQLTreeView.Shared;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using SQLTreeView.Data;
-using SQLTreeView.Shared.DataAccess;
-using SQLTreeView.Shared.Models;
+﻿using Microsoft.AspNetCore.Mvc;
+using SQLTreeView.Shared;
 
 namespace SQLTreeView.Server.Controllers
 {
@@ -15,13 +7,28 @@ namespace SQLTreeView.Server.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        OrganizationDataAccessLayer db = new OrganizationDataAccessLayer();
+        private static readonly string[] Summaries = new[]
+        {
+            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+        };
+
+        private readonly ILogger<WeatherForecastController> _logger;
+
+        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        {
+            _logger = logger;
+        }
 
         [HttpGet]
-        public object Get()
+        public IEnumerable<WeatherForecast> Get()
         {
-            var data = db.GetAllEmployees().ToList();
-            return data;
+            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            {
+                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
+                TemperatureC = Random.Shared.Next(-20, 55),
+                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+            })
+            .ToArray();
         }
     }
 }
