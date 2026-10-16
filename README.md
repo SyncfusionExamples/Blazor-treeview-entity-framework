@@ -1,66 +1,85 @@
-# Blazor-treeview-entity-framework
+# Blazor TreeView Entity Framework Integration
 
-**Repository Description**  
-This repository contains a quick getting‑started Blazor sample that demonstrates how to build an Entity Framework–backed application using the Syncfusion Blazor TreeView component.
+## Overview
 
-The Syncfusion Blazor TreeView component provides a graphical user interface for representing hierarchical data in a tree structure. It offers high performance along with advanced features such as load‑on‑demand, checkbox support, multiple selection, tree navigation, drag‑and‑drop, tree node editing, and template customization.
+This sample demonstrates how to populate a Syncfusion [Blazor TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) using data stored in a SQL Server database and accessed through Entity Framework. The application uses a database-backed hierarchical data source to render nodes in the TreeView component, allowing developers to manage and display relational data in a structured tree format. The sample is useful for applications that require navigation structures, category hierarchies, organizational trees, or database-driven parent-child relationships.
 
-## Project Overview
-The purpose of this project is to help developers understand how to integrate the Syncfusion Blazor TreeView component with Entity Framework to display hierarchical data from a database. It showcases how database‑driven data can be visualized in a structured tree format within a Blazor application.
+## Key Features
 
-## Features
-- Integration of the Syncfusion Blazor TreeView component  
-- Entity Framework–based data binding  
-- Display hierarchical data in a tree structure  
-- Load‑on‑demand support for large datasets  
-- Checkbox, selection, and tree navigation features  
-- Drag‑and‑drop and node editing capabilities  
-- Template customization for tree nodes  
+- Uses `SfTreeView` to display hierarchical data.
+- Uses `SfContextMenu` to expose node editing actions.
+- Handles node interactions through `NodeClickEventArgs`.
+- Retrieves the next available record identifier from `api/Default/index`.
+- Uses `tree.AddNodes()` to dynamically create child nodes.
+- Uses `tree.RemoveNodes()` to delete selected nodes.
+- Uses `tree.BeginEdit()` to rename existing nodes.
+- Maintains selected node information through the TreeView node UID.
+- Demonstrates integration between Blazor UI components and Entity Framework-backed data services.
+- Supports hierarchical parent-child record relationships.
 
 ## Prerequisites
-Ensure the following requirements are met before running this project:
-- Visual Studio Code or Visual Studio 2019  
-- .NET Core SDK 3.1.2  
-- SQL Server LocalDB  
 
-## Installation and Running the Application
+- Visual Studio 2022 or Visual Studio Code
+- .NET SDK compatible with the project's target framework
+- SQL Server LocalDB
+- Entity Framework
+- Syncfusion Blazor components
+- Access to the sample database used by the project
 
-### Clone and Open the Project
-1. Clone the repository.
-2. Open the project or solution file in Visual Studio 2019.
+## How to Run the Project
 
-### Configure the Database Connection
-Update the database connection string in the following file:
-`Shared/DataAccess/DataContext.cs`
-Example configuration:
-```csharp
-optionsBuilder.UseSqlServer(
-  @"Data Source=(LocalDB)\MSSQLLocalDB;
-    AttachDbFilename='D:\blazor\TreeView-EntityFramework\SQLTreeView\Shared\App_Data\NORTHWND.MDF';
-    Integrated Security=True;
-    Connect Timeout=30");
+**Visual Studio 2022**
+
+1. Clone or download this repository.
+2. Open the solution file:
+
+   `SQLTreeView.sln`
+
+3. Restore all NuGet packages.
+4. Set the startup project to:
+
+   `SQLTreeView`
+
+5. Open the following file and update the database connection string as required:
+
+   `Shared/DataAccess/DataContext.cs`
+
+6. Ensure the referenced SQL Server database is available.
+7. Build the solution.
+8. Run the application using `Ctrl+F5`.
+9. Open the application URL displayed by Visual Studio after launch.
+
+**Visual Studio Code**
+
+1. Open the repository folder in Visual Studio Code.
+2. Open the integrated terminal.
+3. Navigate to the project directory.
+
+```bash
+cd SQLTreeView
 ```
-### Run the Application
-1. Build the solution.
-2. Run the project in Visual Studio.
-3. Open the application in the browser to view the TreeView rendered with data from the database.
 
-## Usage
-Run the application to explore how hierarchical data from Entity Framework is displayed using the Blazor TreeView. You can expand nodes, load data dynamically, interact with checkboxes, and perform drag‑and‑drop operations.
+4. Restore NuGet packages.
 
-## Documentation
-- General Syncfusion documentation:
-https://help.syncfusion.com/
-- Blazor Introduction:
-https://blazor.syncfusion.com/documentation/introduction
-- Blazor TreeView Getting Started:
-https://blazor.syncfusion.com/documentation/treeview/getting-started
+```bash
+dotnet restore
+```
 
-## Troubleshooting
-- Ensure the database file path in the connection string is valid.
-- Verify that SQL Server LocalDB is installed and accessible.
-- Rebuild the solution if Entity Framework or TreeView components fail to load.
-- Check browser and application logs for runtime errors.
+5. Run the project.
 
-## Support
-For detailed API references, configuration options, and advanced usage examples, refer to the Syncfusion Blazor TreeView documentation links provided above.
+```bash
+dotnet run
+```
+
+6. Open the local URL displayed in the terminal.
+7. Verify that data from the configured database is displayed in the TreeView component.
+
+## Support and Feedback
+
+- For general product questions, visit the [Syncfusion Community Forum](https://www.syncfusion.com/forums) or [Syncfusion Support](https://www.syncfusion.com/support).
+- To report an issue specific to this sample, open a GitHub issue in this repository.
+- Official documentation: https://blazor.syncfusion.com/documentation/treeview/getting-started
+
+## License
+
+This is a Syncfusion sample project provided to demonstrate product usage. Review the [Syncfusion license terms](https://www.syncfusion.com/sales/pricing?category=ui-components) before using Syncfusion components in your own applications.
