@@ -19,15 +19,15 @@ The purpose of this project is to help developers understand how to integrate th
 
 ## Prerequisites
 Ensure the following requirements are met before running this project:
-- Visual Studio Code or Visual Studio 2019  
-- .NET Core SDK 3.1.2  
+- Visual Studio Code or Visual Studio 2022 (with the .NET 10 workload)
+- .NET 10 SDK
 - SQL Server LocalDB  
 
 ## Installation and Running the Application
 
 ### Clone and Open the Project
 1. Clone the repository.
-2. Open the project or solution file in Visual Studio 2019.
+2. Open the solution file (SQLTreeView.sln) in Visual Studio 2022 or Visual Studio Code.
 
 ### Configure the Database Connection
 Update the database connection string in the following file:
