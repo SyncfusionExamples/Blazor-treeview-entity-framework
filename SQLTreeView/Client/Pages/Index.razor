@@ -1,10 +1,9 @@
-﻿@page "/"
+@page "/"
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Data
 @inject HttpClient Http
-
 <div id="treeview">
     <SfTreeView @ref="tree" TValue="Employee" @bind-SelectedNodes="@selectedNodes" @bind-ExpandedNodes="expandedNodes">
         <TreeViewFieldsSettings TValue="Employee" Id="Id" Text="Name" ParentID="ParentId" HasChildren="HasTeam" Expanded="IsExpanded" Query="TreeViewQuery">
@@ -53,6 +52,7 @@
         var count = await Http.GetFromJsonAsync<int>("api/Default/index");
         this.index = count + 1;
     }
+
     // Triggers when TreeView Node is selected
     public void OnSelect(NodeSelectEventArgs args)
     {

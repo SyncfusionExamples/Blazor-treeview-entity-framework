@@ -19,26 +19,22 @@ The purpose of this project is to help developers understand how to integrate th
 
 ## Prerequisites
 Ensure the following requirements are met before running this project:
-- Visual Studio Code or Visual Studio 2019  
-- .NET Core SDK 3.1.2  
+- Visual Studio Code or Visual Studio 2022 (with the .NET 10 workload)
+- .NET 10 SDK
 - SQL Server LocalDB  
 
 ## Installation and Running the Application
 
 ### Clone and Open the Project
 1. Clone the repository.
-2. Open the project or solution file in Visual Studio 2019.
+2. Open the solution file (SQLTreeView.sln) in Visual Studio 2022 or Visual Studio Code.
 
 ### Configure the Database Connection
-Update the database connection string in the following file:
-`Shared/DataAccess/DataContext.cs`
-Example configuration:
-```csharp
-optionsBuilder.UseSqlServer(
-  @"Data Source=(LocalDB)\MSSQLLocalDB;
-    AttachDbFilename='D:\blazor\TreeView-EntityFramework\SQLTreeView\Shared\App_Data\NORTHWND.MDF';
-    Integrated Security=True;
-    Connect Timeout=30");
+By default, the sample connects to SQL Server LocalDB using the `SQLTreeView/Shared/App_Data/NORTHWND.MDF` file, resolved relative to the repository — no path changes are needed after cloning.
+
+Connection details are configured in `Shared/DataAccess/OrganizationContext.cs`. To use a different SQL Server (e.g. SQL Server in Docker or a remote instance) without editing code, set the `TreeViewConnectionString` environment variable before running:
+```bash
+TreeViewConnectionString="Server=localhost,1433;Database=NORTHWND;User Id=sa;Password=YourPassword;TrustServerCertificate=True;Connect Timeout=30"
 ```
 ### Run the Application
 1. Build the solution.
@@ -57,8 +53,8 @@ https://blazor.syncfusion.com/documentation/introduction
 https://blazor.syncfusion.com/documentation/treeview/getting-started
 
 ## Troubleshooting
-- Ensure the database file path in the connection string is valid.
-- Verify that SQL Server LocalDB is installed and accessible.
+- Ensure the NORTHWND.MDF file exists at `SQLTreeView/Shared/App_Data/NORTHWND.MDF`.
+- Verify that SQL Server LocalDB is installed and accessible (or set `TreeViewConnectionString` to point at another SQL Server).
 - Rebuild the solution if Entity Framework or TreeView components fail to load.
 - Check browser and application logs for runtime errors.
 
